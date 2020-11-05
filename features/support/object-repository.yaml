@@ -1,0 +1,16 @@
+# ########  Objects from UI ############
+
+homePage:
+  findAWorkshop: ".//khakjd//adkuh"
+
+# workshopPage:
+#   searchboxLocation: ""
+#   searchBoxSendArrow: ""
+#   resultsFirstElement: ""
+#   resultsFirstElementDistance: "" 
+#   resultsFirstElementInfo: ""
+
+# flatironWorkshopInfo:
+#   flatironAddress: ""
+#   flatironCityAndZip: ""
+#   flatironToggleBussinessHours: ""

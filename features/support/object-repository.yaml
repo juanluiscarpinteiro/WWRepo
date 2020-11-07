@@ -1,16 +1,16 @@
 # ########  Objects from UI ############
 
 homePage:
-  findAWorkshop: ".//khakjd//adkuh"
+  findAWorkshop: ".//div[@class= 'NavigationSlice_containerRight__38-eE']//div//ul[@class = 'Menu_list__1vo9S SecondaryMenu_wrapper__3Q-S0' ]//li//a[@da-label = 'ACTION']"
 
-# workshopPage:
-#   searchboxLocation: ""
-#   searchBoxSendArrow: ""
-#   resultsFirstElement: ""
-#   resultsFirstElementDistance: "" 
-#   resultsFirstElementInfo: ""
+workshopPage:
+  searchboxLocation: ".//div[@id='search-container']//form//input[@id='location-search']"
+  searchBoxSendArrow: ".//div[@id='search-container']//form//button[@id='location-search-cta']"
+  resultsFirstElement: ".//div[@id='search-results']/div//div//a"
+  resultsFirstElementDistance: ".//div[@id='search-results']/div//div//span" 
 
-# flatironWorkshopInfo:
-#   flatironAddress: ""
-#   flatironCityAndZip: ""
-#   flatironToggleBussinessHours: ""
+flatironWorkshopInfo:
+  flatironHeaderName: ".//div[@class= 'addressContainer-UOhpe']//h1"
+  flatironToggleHours: ".//div[@class= 'addressContainer-UOhpe']//div[contains(@class , 'address')]/following-sibling::div"
+  flatironBegginingHoursForSelectedDay: "//div[contains(@class, 'hoursWrapper')]//div//div//div[contains(text(), 'DAY')]/..//div[contains(@class, 'times')]//span[1]"
+  flatironendingHoursForSelectedDay: "//div[contains(@class, 'hoursWrapper')]//div//div//div[contains(text(), 'DAY')]/..//div[contains(@class, 'times')]//span[2]"

@@ -41,7 +41,10 @@ This is a repo for the requested questions
 
 
 Question #1
+I used a Gem to process the data and diaplay in the requested format.
 
-
-Questiion#2 
+Questiion #2 
 I decided to approach the automation with a BDD mindset. I was able to store all UI elements under the object-repository.yaml and run in chrome.
+
+Question #3 
+No notes

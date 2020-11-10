@@ -44,7 +44,8 @@ Question #1
 I used a Gem to process the data and diaplay in the requested format.
 To run script follow the following
 
-On command line or git bash go to the location where the repo was cloned and enter the following
+On command line or git bash go to the location where the repo was cloned and enter the following:
+
 ruby question1.rb
 
 
@@ -53,5 +54,6 @@ I decided to approach the automation with a BDD mindset. I was able to store all
 
 
 Question #3 
-to run on command line or git bash go to the location where the repo was cloned and enter the following
+to run on command line or git bash go to the location where the repo was cloned and enter the following:
+
 ruby question3.rb

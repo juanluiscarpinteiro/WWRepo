@@ -14,15 +14,7 @@ This is a repo for the requested questions
     $ gem install bundler
     ```
 
-2. Download latest stable drivers and add them to your system path:
-	* ChromeDriver (https://chromedriver.chromium.org/)
-	* to enable safari driver - open safari preferences - advanceded - go to developer tab - click the allow remote automation option
-	
-	Move drivers to a folder and add to PATH variable
-	
-	$ export PATH=$PATH:/Users/Username/drivers/
-	
-	If you are using MacOS be sure that chrome is installed and visible under your applications
+2. brew cask install chromediver
 	
 	
 4. Project Dependencies

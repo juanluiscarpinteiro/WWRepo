@@ -42,6 +42,10 @@ This is a repo for the requested questions
 
 Question #1
 I used a Gem to process the data and diaplay in the requested format.
+To run script follow the following
+
+On command line or git bash go to the location where the repo was cloned and enter the following
+
 
 Questiion #2 
 I decided to approach the automation with a BDD mindset. I was able to store all UI elements under the object-repository.yaml and run in chrome.

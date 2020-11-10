@@ -58,19 +58,76 @@ Then(/^I display hours of operation for TODAY$/) do
     page.find(:xpath, config['flatironWorkshopInfo']['flatironToggleHours'],wait:30).click
     puts "Today is " + time.strftime("%A")
     $currentDay = time.strftime("%A")
-    begginingHours = page.find(:xpath, config['flatironWorkshopInfo']['flatironBegginingHoursForSelectedDay'].sub('DAY',$currentDay),wait:30).text
-    endingHours = page.find(:xpath, config['flatironWorkshopInfo']['flatironendingHoursForSelectedDay'].sub('DAY',$currentDay),wait:30).text
+    workingHours = page.find(:xpath, config['flatironWorkshopInfo']['flatironHoursForSelectedDay'].sub('DAY',$currentDay),wait:30).text
     puts "Hours of Operation for " +$currentDay
-    puts begginingHours 
-    puts endingHours
-end
-Then(/^$/) do 
-
-end
-Then(/^$/) do
+    puts workingHours 
 end
 
+Then(/^I display meetings for "([^"]*)" under the "([^"]*)" table$/) do |dayOfTheWeek, workshopTableType|
+    printMeetings(dayOfTheWeek,workshopTableType,config)
 
+end
+
+
+def printMeetings(day,tableCase,config)
+    names =  []
+    nameToBeAdded = ''
+    
+    case tableCase.upcase
+    when "STUDIO"
+        begin
+            meetings = page.all(:xpath, config['flatironWorkshopInfo']['tableOfstudioMeetings'].sub('DAY',day), wait:30)
+        rescue 
+            meetings= '' 
+        end
+    when 'VIRTUAL'
+        begin
+            meetings = page.all(:xpath, config['flatironWorkshopInfo']['tableOfVirtualMeetings'].sub('DAY',day), wait:30)
+        rescue 
+            meetings= '' 
+        end
+
+    end
+        
+        if meetings == ''
+            puts "No meetings on this day"
+        else 
+            for meeting in meetings
+                doesItExist =false
+                nameToBeAdded = meeting.find(:xpath, ".//span[2]" ).text.strip
+                if nameToBeAdded != ''
+                    # doesItExist = names.has_key?(nameToBeAdded)
+                    names.reverse.each do |key|
+                        if key['NAME'] == nameToBeAdded
+                            doesItExist = true 
+                        end
+                    end
+                    if doesItExist == false 
+                        # puts "I came to does not exist"
+                        names << {"NAME" => nameToBeAdded,"AMOUNT" => 1}
+                    else 
+                        names.reverse.each do |key|
+                            if key['NAME'] == nameToBeAdded 
+                                # puts key['NAME']
+                                # puts key['AMOUNT']
+                                key['AMOUNT'] = key['AMOUNT']+1
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        # puts names
+    case tableCase.upcase
+    when 'VIRTUAL'
+        puts "Virtual Workshops"
+    when 'STUDIO'
+        puts "Studio Workshops"
+    end
+        names.each do |meetings|
+            puts meetings['NAME'].to_s + " has " + meetings['AMOUNT'].to_s + " meetings"
+        end
+end
 
 
 

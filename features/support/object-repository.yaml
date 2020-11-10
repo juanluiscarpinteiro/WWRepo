@@ -12,5 +12,6 @@ workshopPage:
 flatironWorkshopInfo:
   flatironHeaderName: ".//div[@class= 'addressContainer-UOhpe']//h1"
   flatironToggleHours: ".//div[@class= 'addressContainer-UOhpe']//div[contains(@class , 'address')]/following-sibling::div"
-  flatironBegginingHoursForSelectedDay: "//div[contains(@class, 'hoursWrapper')]//div//div//div[contains(text(), 'DAY')]/..//div[contains(@class, 'times')]//span[1]"
-  flatironendingHoursForSelectedDay: "//div[contains(@class, 'hoursWrapper')]//div//div//div[contains(text(), 'DAY')]/..//div[contains(@class, 'times')]//span[2]"
+  flatironHoursForSelectedDay: "//div[contains(@class, 'hoursWrapper')]//div//div//div[contains(text(), 'DAY')]/..//div[contains(@class, 'times')]"
+  tableOfstudioMeetings: "//div[contains(@class, 'workshopSchedule')]//div[contains(@class , 'title') and contains(text(),'Studio Workshops schedule')]//..//..//div[contains(@class , 'scheduleContainerMobile')]//div//span[contains(text(),'DAY')]/..//div"
+  tableOfVirtualMeetings: "//div[contains(@class , 'title') and contains(text(),'Virtual Workshops schedule')]//..//..//div[contains(@class , 'scheduleContainerMobile')]//div//span[contains(text(),'DAY')]/..//div"

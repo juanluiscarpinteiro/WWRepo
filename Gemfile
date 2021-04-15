@@ -9,4 +9,4 @@ gem 'roo'
 gem 'csv'
 gem 'jsonpath'
 gem 'ffi', :platforms => [:mswin, :mingw]
-gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'json', '~> 2.3'

@@ -33,9 +33,10 @@ GEM
     cucumber-wire (0.0.1)
     diff-lcs (1.4.4)
     ffi (1.13.1)
+    ffi (1.13.1-x64-mingw32)
     ffi (1.13.1-x86-mingw32)
     gherkin (5.1.0)
-    json (1.8.6)
+    json (2.3.0)
     jsonpath (1.0.5)
       multi_json
       to_regexp (~> 0.2.1)
@@ -83,13 +84,14 @@ PLATFORMS
   x64-mingw32
   x86-mingw32
   x86-mswin32
+  x86_64-linux
 
 DEPENDENCIES
   capybara (~> 3.0)
   csv
   cucumber (= 3.1.2)
   ffi
-  json (~> 1.8, >= 1.8.3)
+  json (~> 2.3)
   jsonpath
   rake (~> 10.5)
   roo
